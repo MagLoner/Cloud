@@ -1,0 +1,254 @@
+<style>
+body {
+background: #464451;
+max-width: 900px;
+margin: 10px auto;
+padding: 30px;
+bgcolor: #464451;
+alink:#FF00FF;
+link:#FF0000;
+vlink:#0000FF;
+text:#000000;
+}
+
+html {
+  background-image: url(fon.png); /* Добавляем фон */
+  background-size: 100%; /* Масштабируем фон */
+  background-attachment: scroll ; /* Фиксируем фон веб-страницы */
+  background-origin: content-box;
+  cursor: url(curs2.cur), pointer;
+ }
+
+ @font-face {
+  font-family: Graphitty; /* Гарнитура шрифта */
+  src: url(font/13888.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: Zagolovok; /* Гарнитура шрифта */
+  src: url(font/Isadorascc.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: simpleHands; /* Гарнитура шрифта */
+  src: url(font/Pompadur.ttf); /* Путь к файлу со шрифтом */
+}
+/* Контент (статья) */
+.contents { /* Блок контента */
+  margin: auto; /*выравниваем по центру*/
+  margin-bottom: 10px; /* Отступ блока статьи от блока подвала */
+  margin-top: 10px;
+  width: 80%;
+  padding: 10px; /* Отступ текста от краёв блока */
+  background: #132728; /* Фон статьи */
+  border-radius: 5px;
+  box-shadow: rgba(200,200,180,10) 0px 1px 10px; /* Тень. Визуально приподнимает блок над оболочкой */
+}
+
+
+.header{
+  margin: auto; /*выравниваем по центру*/
+  height: 210px; /* Высота шапки */
+  width: 80%;
+  background-color: rgba(15, 34, 32, 0.9); /*#265652;*/
+  background-image: url(me1.png) ;/* Фон шапки */
+  background-size:77%;
+  background-position: left;
+  background-repeat: no-repeat;
+  margin-bottom: 5px; /* Нижний отступ шапки от остального контента */
+  border-radius: 10px;  /* Закругляются углы блока */
+
+  box-shadow: rgba(200,200,180,10) 0px 1px 10px; /* Тень. Визуально приподнимает блок над оболочкой */
+}
+.head img{ /* Фоновая картинка в шапке */
+  height:100px;
+  float:left;
+  margin: 20px 0 40px 0px;} /* Размещаем картинку в блоке header. 1-я и 3-я цифры - двигаем вверх-вниз, 2-я и 4-я цифры - двигаем вправо-влево */
+.head h1,h5{ /* Заголовок сайта */
+  font-family: Zagolovok;
+  font-size: 32pt;
+  text-align: right;
+  padding-top:20px;
+  margin:40px 40px 0 0; /* Заголовок двигается верх-вправо-вниз-влево. */
+  color:#FFCD96; /* Цвет заголовка */
+  text-shadow: 1px 1px 3px black; /* Параметры тени */
+}
+.head h5{ /* Заголовок сайта */
+  font-size: 18pt;
+  margin:0 40px 0 0;
+}
+.head h1:hover{
+  color:#FFffff;
+}
+.head h5:hover{
+  color:#FFffff;
+}
+
+.menu{
+  float: right;
+  width: auto;
+  height:auto;
+  padding-right:10px;
+  padding-left:10px;
+  margin-top: 20px;
+  margin-right: 2%;
+}
+
+.menu ul {
+  list-style: none; /*убираем маркеры списка*/
+  padding-left: 0; /*убираем левый отступ, равный 40px*/
+  left: 60%;
+  padding-top: auto;
+  padding-bottom: 10px;
+  border-radius: 10px;  /* Закругляются углы блока */
+}
+.menu li{
+  display: inline;
+  padding: px;
+  text-bottom:10px;
+}
+.menu ul a{
+  font-family: BoldCircuit;
+  text-decoration: none;
+  font-size:12pt;
+  padding: 1em;
+  color: #FFCD96;
+  border-right: 2px solid #DBC8B8;
+  border-left: 2px solid #DBC8B8;
+  border-radius: 10px;
+  box-shadow: rgba(200,200,180,0.5) 0px 1px 10px;
+}
+.menu ul a:not(:hover) {
+  transition: 1.1s;
+}
+.menu ul a:hover {
+  font-weight: bold;
+   transition: 0.8s;
+  font-size:14pt;
+  background: #FFCD96;
+  color: #102045;
+  font-style: bold;
+  box-shadow: rgba(200,200,180,10) 0px 1px 10px; /* Тень. Визуально приподнимает блок над оболочкой */
+  }
+
+
+.blocks {
+  border-top: 2px dashed  #FFCD96;
+  border-bottom: 2px dashed  #FFCD96;
+  margin:10px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.blocks table {
+  table-layout: fixed; /* Фиксированная ширина ячеек */
+  width: 100%;/* Ширина таблицы */
+  border-spacing: 0  0;
+  border-radius:10px;
+ }
+.blocks img {
+    width: 100%;
+    height:100%;
+    vertical-align: middle;
+}
+.blocks TD, TH{
+  box-shadow: #DBC8B8 0px 1px 8px;
+}
+.textBlock p{
+  padding:10px;
+  text-indent: 1.5em;
+  word-wrap: break-word;
+  font-family: simpleHands;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  word-spacing: 6px;
+  font-size: 14pt;
+  text-align: left;
+  color:#DBC8B8;
+  text-shadow: 2px 2px 5px #000011 ; /* Параметры тени */
+}
+.textBlock h1,h5{ /* Заголовок сайта */
+  font-family: Zagolovok;
+  font-size: 32pt;
+  padding-top:20px;
+  margin:40px 40px 0 0; /* Заголовок двигается верх-вправо-вниз-влево. */
+  color:#FFCD96; /* Цвет заголовка */
+  text-shadow: 1px 1px 3px black; /* Параметры тени */
+}
+.textBlock a{
+  font-family: BoldCircuit;
+  text-decoration: none;
+  font-size:14pt;
+  padding: 1em;
+  color: #FFCD96;
+}
+.textBlock a:not(:hover) {
+  transition: 0.5s;
+}
+.textBlock a:hover {
+  font-weight: bold;
+   transition: 0.5s;
+  font-size:16pt;
+  font-style: bold;
+  }
+.textBlock h3{
+  padding:10px;
+  text-indent: 1.5em;
+  word-wrap: break-word;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  word-spacing: 6px;
+  font-size: 16pt;
+  text-align: left;
+  color:#DBC8B8;
+  text-shadow: 2px 2px 5px #000011 ; /* Параметры тени */
+}
+.topbutton a{
+  opacity: 0.6;
+  width:50px;
+  border-right: 2px solid #FFAB51;
+  border-left: 2px solid #FFAB51;
+  background:#132728;
+  text-align:center;
+  padding:10px;
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  color:#DBC8B8;
+  cursor: url(curs2.cur), pointer;
+  font-size:18pt;
+  border-radius: 50px;
+}
+.empty{ /* Блок контента */
+  width: 80%;
+  height:50px;
+.topbutton a:not(:hover) {
+  transition: 0.8s;
+}
+.topbutton a:hover {
+   transition: 0.8s;
+  background: #DBC8B8;
+  color: #133045;
+  font: bold 200%;
+  box-shadow: rgba(200,200,180,10) 0px 1px 10px; /* Тень. Визуально приподнимает блок над оболочкой */
+  }
+}
+#submit {
+font-family: simpleHands;
+color: #DBC8B8;
+font-size: 18px;
+padding: 10px;
+text-decoration: none;
+background: #132728; /* Фон статьи */
+border-radius: 5px;
+box-shadow: rgba(200,200,180,10) 0px 1px 10px; /* Тень. Визуально приподнимает блок над оболочкой */
+}
+#submit:not.hover{
+   transition: 0.9s;
+}
+#submit:hover {
+    transition: 0.9s;
+    font-size: 18px;
+    color: #133045;
+    font: bold 200%;
+    background: #DBC8B8;
+    box-shadow: rgba(200,200,180,10) 0px 1px 10px;
+}

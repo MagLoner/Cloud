@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="blocks textBlock">
+    {% if current_user.is_anonymous %}
+     <h3>Привет!</h3>
+    {% else %}
+    <h3>Привет, {{ current_user.username }}!</h3>
+    {% endif %}
+
+    <p  >Меня зовут Джейн, но друзья зовут меня Mag. Да, вот так просто как и любое знакомство начинается мой рассказ. Хотя имена не всегда важны.
+        Можно взять и спонтанно начать разговор ни о чем с тем, кого видишь впервые, рассказать ему все-все.
+        Но в будущем вы возможно только сможете пересечся взглядами в толпе, либо совсем никогда больше не увидеться...
+        Второе случается, к сожалению, намного чаще...
+        Но не об этом.
+        <cite>Искусство – единственная серьезная вещь в мире, но художник – единственный человек в мире,
+            никогда не бывающий серьезным, который может решение превратить в проблему.</cite>
+    </p>
+  </div>
+  <div class="empty"></div>
+  <div class="blocks textBlock">
+    <p> Немного творчества:
+    </p>
+     <table>
+       <tr >
+        <th><img src="static/img/imgMini/1.png" ></th>
+        <th><img src="static/img/imgMini/2.png"></th>
+        <th><img src="static/img/imgMini/3.png"></th>
+        <th><img src="static/img/imgMini/4.png"></th>
+        <th><img src="static/img/imgMini/5.png"></th>
+        <th><img src="static/img/imgMini/6.png"></th>
+        <th><img src="static/img/imgMini/7.png"></th>
+        <th><img src="static/img/imgMini/8.png"></th>
+       </tr>
+     </table>
+     <p> И фотографий:</p>
+     <table>
+       <tr>
+        <th><img src="static/img/fotoMini/1.png"></th>
+        <th><img src="static/img/fotoMini/2.png"></th>
+        <th><img src="static/img/fotoMini/3.png"></th>
+        <th><img src="static/img/fotoMini/4.png"></th>
+        <th><img src="static/img/fotoMini/5.png"></th>
+        <th><img src="static/img/fotoMini/6.png"></th>
+        <th><img src="static/img/fotoMini/7.png"></th>
+        <th><img src="static/img/fotoMini/8.png" ></th>
+        </tr><tr>
+        <th><img src="static/img/fotoMini/9.png"></th>
+        <th><img src="static/img/fotoMini/10.png"></th>
+        <th><img src="static/img/fotoMini/11.png"></th>
+        <th><img src="static/img/fotoMini/12.png"></th>
+        <th><img src="static/img/fotoMini/13.png"></th>
+        <th><img src="static/img/fotoMini/14.png"></th>
+        <th><img src="static/img/fotoMini/15.png"></th>
+        <th><img src="static/img/fotoMini/16.png"></th>
+       </tr>
+     </table>
+  </div>
+{% endblock %}
+<!--
+это крч цикл, постс отправляется в роутерс когда мы возвращаем функцию индекс
+{% for post in posts %}
+        <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+        {% endfor %}

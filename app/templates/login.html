@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="textBlock">
+    <h1 color = >Войти: </h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}
+            {% for error in form.username.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}
+            {% for error in form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+<p>Здесь в первые? <a href="{{ url_for('register') }}">Зарегистрируйтесь!</a></p>
+    </div>
+{% endblock %}
+<!--контейнер для веб-формы
+ action - используется для того, чтобы сообщить веб-браузеру URL-адрес,
+  который должен использоваться при отправке информации, введенной пользователем в форму
+ method указывает метод HTTP-запроса, который должен использоваться при отправке формы на сервер
+ novalidate используется для указания веб-браузеру не применять проверку к полям в этой форме,
+  что фактически оставляет эту задачу приложению Flask
+  form.hidden_tag()создает скрытое поле, содержащее токен, используемый для защиты формы от атак CSRF
+ -->
