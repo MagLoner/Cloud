@@ -1,0 +1,66 @@
+#progress-wrapper {
+   	width: 350px;
+   	margin: auto;
+}
+
+#qualitySelect {
+	margin: 15px;
+}
+
+#progressbar {
+	margin: 25px;
+}
+
+.result-image {
+	margin: 5px;
+}
+
+.container {
+    margin: auto;
+    width: 768px;
+    height:auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.result-image {
+	width: 125px;
+	border:1px solid #333333;
+}
+
+.style {
+	width: 125px;
+	height: 125px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin: 8px;
+	border:1px solid #333333;
+}
+
+#selectable {
+	list-style-type: none;
+	list-style: none;
+	height:100%;
+
+    display: table;
+}
+
+#selectable li {
+	display: inline;
+}
+
+#selectable div {
+	float: left;
+}
+
+input[type="file" i] {
+    -webkit-appearance: initial;
+    background-color: initial;
+    cursor: default;
+    align-items: baseline;
+    color: #ffffff;
+    text-align: start !important;
+    padding: initial;
+    border: initial;
+}

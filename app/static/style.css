@@ -1,14 +1,14 @@
 <style>
 body {
-background: #464451;
-max-width: 900px;
-margin: 10px auto;
-padding: 30px;
-bgcolor: #464451;
-alink:#FF00FF;
-link:#FF0000;
-vlink:#0000FF;
-text:#000000;
+    background: #464451;
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 30px;
+    bgcolor: #464451;
+    alink:#FF00FF;
+    link:#FF0000;
+    vlink:#0000FF;
+    text:#000000;
 }
 
 html {
@@ -165,9 +165,30 @@ html {
   color:#DBC8B8;
   text-shadow: 2px 2px 5px #000011 ; /* Параметры тени */
 }
+
+.textBlock label{
+  padding:10px;
+  text-indent: 1.5em;
+  word-wrap: break-word;
+  font-family: simpleHands;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  word-spacing: 6px;
+  font-size: 14pt;
+  text-align: left;
+  color:#DBC8B8;
+  text-shadow: 2px 2px 5px #000011 ; /* Параметры тени */
+}
 .textBlock h1,h5{ /* Заголовок сайта */
   font-family: Zagolovok;
   font-size: 32pt;
+  padding-top:20px;
+  margin:40px 40px 0 0; /* Заголовок двигается верх-вправо-вниз-влево. */
+  color:#FFCD96; /* Цвет заголовка */
+  text-shadow: 1px 1px 3px black; /* Параметры тени */
+}.textBlock h2{ /* Заголовок сайта */
+  font-family: Zagolovok;
+  font-size: 16pt;
   padding-top:20px;
   margin:40px 40px 0 0; /* Заголовок двигается верх-вправо-вниз-влево. */
   color:#FFCD96; /* Цвет заголовка */
@@ -217,9 +238,6 @@ html {
   font-size:18pt;
   border-radius: 50px;
 }
-.empty{ /* Блок контента */
-  width: 80%;
-  height:50px;
 .topbutton a:not(:hover) {
   transition: 0.8s;
 }

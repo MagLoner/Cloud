@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="blocks textBlock">
+		<h1>Deep Art Effects - Turn Image Into Art</h1>
+		<div id="result">
+			<h3>Ваша арт работа</h3>
+			<div id="artwork"></div>
+		</div>
+		<h2>Сначала загрузите изображение, затем выберете качество:</h2>
+		<br>
+		<select id="qualitySelect">
+		  <option value="512">Низкое</option>
+		  <option value="1080" selected="selected">Среднее</option>
+		  <option value="1980">Высокое</option>
+		</select>
+		<label>
+          <input id="optimzeForPrint" type="checkbox" value="false"> Оптимизировать для печати
+
+        </label>
+        <label>
+          <input id="useOriginalColors" type="checkbox" value="false">Использовать оригинальные цвета
+        </label>
+		<br><br>
+		<div id="upload">
+			<input color="#ffffff" type="file" onchange="onFileSelected(event)">
+		</div>
+		<div id="progress-wrapper">
+			<img id="progressbar" src="{{ url_for( 'static', filename='img/loading.gif')}}" alt="loading">
+		</div>
+		<div id="styles">
+			<h2>Выберете стиль:</h2>
+				<div class="empty" id="style-list"></div>
+		</div>
+	</div>
+  	<!-- Deep Art Effects lib -->
+	<script type="text/javascript" src="{{ url_for( 'static', filename='js/client/axios.standalone.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for( 'static', filename='js/client/hmac-sha256.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for( 'static', filename='js/client/sha256.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for( 'static', filename='js/client/hmac.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for( 'static', filename='js/client/enc-base64.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for( 'static', filename='js/client/url-template.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for( 'static', filename='js/client/sigV4Client.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for( 'static', filename='js/client/apiGatewayClient.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for( 'static', filename='js/client/simpleHttpClient.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for( 'static', filename='js/client/utils.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for( 'static', filename='js/client/apigClient.js')}}"></script>
+
+  	<!-- JQuery lib -->
+	<script src="{{ url_for( 'static', filename='js/jquery.js')}}"></script>
+	<!-- Fancybox for artwork preview -->
+	<script src="{{ url_for( 'static', filename='js/fancybox.js')}}"></script>
+	<!-- Image tools -->
+	<script src="{{ url_for( 'static', filename='js/imageTools.js')}}"></script>
+	<!-- Site script-->
+	<script src="{{ url_for( 'static', filename='js/scripts.js')}}"></script>
+
+
+{% endblock %}
